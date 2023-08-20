@@ -1,0 +1,386 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+:root {
+  --text-color: #3b3b3b;
+  --light: #fdfdfd;
+  --light-2: rgba(59, 59, 59, 0.2);
+  --logo-color: #ee1f74;
+  --logo-color-second: #f47254;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  height: 70px;
+  background-color: #fff;
+  transition: position 0.3s;
+}
+nav .nav-container {
+  position: relative;
+}
+nav .nav-container .nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav .nav-container .nav a {
+  text-decoration: none;
+}
+nav .nav-container .nav a .logo-div {
+  display: flex;
+}
+nav .nav-container .nav a .logo-div h1 {
+  padding-top: 12px;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--text-color);
+}
+nav .nav-container .nav .hide-icon {
+  display: none;
+}
+nav .nav-container .nav .visible-icon {
+  padding: 15px 40px;
+  font-size: 30px;
+  color: var(--header);
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+nav .nav-container .nav .nav-list {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 0;
+  padding: 30px 0;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  transform: translateX(100%);
+  background-color: var(--logo-color);
+  list-style: none;
+  opacity: 1;
+  transition: 0.3s;
+  overflow: auto;
+}
+nav .nav-container .nav .nav-list a {
+  padding: 30px;
+  font-size: 28px;
+  text-decoration: none;
+}
+nav .nav-container .nav .nav-list a .nav-li-item {
+  color: var(--light);
+  transition: font-size 0.4s;
+}
+nav .nav-container .nav .nav-list .nav-li-item:hover {
+  font-size: 29px;
+}
+nav .nav-container .nav .show-nav {
+  transform: translateX(0);
+}
+
+.main-photo {
+  height: 300px;
+  background-image: url("../img/asian-ga64aa9886_1280.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.main-photo .shadow {
+  width: 100%;
+  height: 100%;
+  background-color: var(--shadow);
+}
+.main-photo .shadow h1 {
+  padding: 90px 30px;
+  width: 70%;
+  font-size: 32px;
+  color: var(--light);
+}
+
+.offer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+  width: 100%;
+  color: var(--text-color);
+  background-color: var(--light);
+  scroll-margin-top: 70px;
+}
+.offer h1 {
+  padding: 35px 10px 25px;
+  font-size: 30px;
+  text-align: center;
+}
+.offer .cards .card {
+  padding: 10px 20px;
+  width: 360px;
+  text-align: center;
+}
+.offer .cards .card .icon {
+  padding: 10px;
+  font-size: 80px;
+  color: var(--logo-color);
+}
+.offer .cards .card .rule {
+  padding: 10px 35px 40px;
+}
+
+.team {
+  padding-bottom: 40px;
+  color: var(--light);
+  background-color: var(--logo-color);
+  scroll-margin-top: 70px;
+}
+.team h1 {
+  padding: 35px 10px 10px;
+  font-size: 30px;
+  text-align: center;
+}
+.team .workers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team .workers .worker {
+  text-align: center;
+}
+.team .workers .worker .name {
+  padding: 10px;
+  font-size: 20px;
+}
+.team .workers .worker .position {
+  padding-bottom: 20px;
+  border-bottom: var(--logo-color-second) 1px solid;
+}
+.team .workers .worker .photo {
+  margin: 50px 20px 10px;
+  width: 85vw;
+  height: 85vw;
+  background-size: cover;
+  background-position: center;
+}
+.team .workers .worker .first {
+  background-image: url("../img/mentor-2494673_1280.jpg");
+}
+.team .workers .worker .second {
+  background-image: url("../img/business-woman-g742863226_1280.jpg");
+}
+.team .workers .worker .third {
+  background-image: url("../img/business-man-g187a1fc11_1280.jpg");
+}
+.team .workers .worker .fourth {
+  background-image: url("../img/kobieta1.jpg");
+}
+.team .workers .worker .fifth {
+  background-image: url("../img/entrepreneur-g7b1c69764_1280.jpg");
+}
+.team .workers .worker .sixth {
+  background-image: url("../img/woman-g777c6ba00_1280.jpg");
+}
+.team .workers .worker:last-child .position {
+  border: none;
+}
+
+.opinions {
+  padding-bottom: 50px;
+  color: var(--text-color);
+  background-color: var(--light);
+  scroll-margin-top: 70px;
+}
+.opinions h1 {
+  padding: 35px 10px 25px;
+  font-size: 30px;
+  text-align: center;
+}
+.opinions .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.opinions .wrapper .slide {
+  padding: 30px 35px;
+  margin: 20px;
+  width: 360px;
+  height: 400px;
+  background-color: var(--light);
+  border-radius: 10px;
+  box-shadow: inset 0 0 12px 2px var(--logo-color);
+}
+.opinions .wrapper .slide h4 {
+  padding: 20px 0;
+  font-size: 24px;
+  letter-spacing: 1px;
+  color: var(--text-color);
+}
+.opinions .wrapper .slide p q {
+  font-size: 20px;
+  font-style: italic;
+  color: var(--text-color);
+}
+
+.jobs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  color: var(--light);
+  background-color: var(--logo-color);
+  scroll-margin-top: 70px;
+}
+.jobs h1 {
+  padding: 35px 10px 45px;
+  font-size: 30px;
+}
+.jobs .jobs-container {
+  width: 80vw;
+}
+.jobs .jobs-container .input-section {
+  width: 100%;
+  height: 200px;
+  background-image: url("../img/industrial-g79b6584fa_1280.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.jobs .jobs-container .input-section .shadow {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+  background-color: var(--shadow);
+}
+.jobs .jobs-container .input-section .shadow input {
+  padding: 10px;
+  margin: 20px;
+  width: 70%;
+  height: 50px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+.jobs .jobs-container .list {
+  padding: 10px;
+  background-color: var(--light);
+}
+.jobs .jobs-container .list .list-title {
+  padding: 10px;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.jobs .jobs-container .list ul {
+  list-style: none;
+}
+.jobs .jobs-container .list ul li {
+  padding: 5px 10px;
+  font-size: 18px;
+  color: var(--text-color);
+  border-bottom: var(--light-2) 1px solid;
+}
+.jobs .jobs-container .list ul li:last-child {
+  border: none;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 50px;
+  scroll-margin-top: 70px;
+}
+.contact h1 {
+  padding: 35px 20px 45px;
+  font-size: 30px;
+  text-align: center;
+  color: var(--text-color);
+  background-color: var(--light);
+}
+.contact .contact-div {
+  padding: 40px 25px 50px;
+  width: 80vw;
+  background-color: var(--logo-color);
+  box-shadow: 0 0 7px 2px var(--text-color);
+}
+.contact .contact-div form label {
+  display: inline-block;
+  padding: 10px 5px;
+  width: 100%;
+  font-size: 20px;
+}
+.contact .contact-div form input {
+  padding: 5px;
+  margin-bottom: 20px;
+  width: 90%;
+  height: 36px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+.contact .contact-div form textarea {
+  margin-bottom: 20px;
+  width: 90%;
+  height: 200px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+.contact .contact-div form .checkbox-section {
+  display: flex;
+  width: 100%;
+}
+.contact .contact-div form .checkbox-section .checkbox {
+  padding: 5px;
+  width: 30px;
+}
+.contact .contact-div form .checkbox-section .checkbox-label {
+  padding: 1px 30px 0 8px;
+  font-size: 14px;
+}
+.contact .contact-div form .send {
+  position: relative;
+  left: calc(50% - 60px);
+  margin-top: 40px;
+  padding: 20px;
+  width: 120px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--text-color);
+  background-color: var(--light);
+  border: 2px solid var(--text-color);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+footer {
+  color: #000;
+  background-color: var(--logo-color);
+}
+footer .footer-container {
+  padding: 40px 20px 25px;
+  font-size: 20px;
+}
+footer .footer-container .faf {
+  padding: 10px 7px;
+}
+footer .copy {
+  padding: 10px;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */

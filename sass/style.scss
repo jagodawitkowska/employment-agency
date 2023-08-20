@@ -1,0 +1,440 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	width: 100vw;
+	font-family: "Montserrat", sans-serif;
+	background-color: #fff;
+	overflow-x: hidden;
+}
+
+:root {
+	--text-color: #3b3b3b;
+	--light: #fdfdfd;
+	--light-2: rgba(59, 59, 59, 0.2);
+	--logo-color: #ee1f74;
+	--logo-color-second: #f47254;
+	--shadow: rgba(0, 0, 0, 0.4);
+}
+
+nav {
+	position: sticky;
+	top: 0;
+	height: 70px;
+	background-color: #fff;
+	transition: position 0.3s;
+
+	.nav-container {
+		position: relative;
+
+		.nav {
+			display: flex;
+			justify-content: space-between;
+
+			a {
+				text-decoration: none;
+				.logo-div {
+					display: flex;
+					h1 {
+						padding-top: 12px;
+						font-size: 38px;
+						font-weight: 700;
+						color: var(--text-color);
+					}
+				}
+			}
+
+			.hide-icon {
+				display: none;
+			}
+
+			.visible-icon {
+				padding: 15px 40px;
+				font-size: 30px;
+				color: var(--header);
+				background: none;
+				border: 0;
+				cursor: pointer;
+			}
+
+			.nav-list {
+				display: flex;
+				flex-direction: column;
+				position: absolute;
+				top: 70px;
+				right: 0;
+				padding: 30px 0;
+				width: 100%;
+				height: 100vh;
+				text-align: center;
+				transform: translateX(100%);
+				background-color: var(--logo-color);
+				list-style: none;
+				opacity: 1;
+				transition: 0.3s;
+				overflow: auto;
+
+				a {
+					padding: 30px;
+					font-size: 28px;
+					text-decoration: none;
+					.nav-li-item {
+						color: var(--light);
+						transition: font-size 0.4s;
+					}
+				}
+
+				.nav-li-item:hover {
+					font-size: 29px;
+				}
+			}
+
+			.show-nav {
+				transform: translateX(0);
+			}
+		}
+	}
+}
+
+.main-photo {
+	height: 300px;
+	background-image: url("../img/asian-ga64aa9886_1280.jpg");
+	background-size: cover;
+	background-position: center;
+
+	.shadow {
+		width: 100%;
+		height: 100%;
+		background-color: var(--shadow);
+
+		h1 {
+			padding: 90px 30px;
+			width: 70%;
+			font-size: 32px;
+			color: var(--light);
+		}
+	}
+}
+
+.offer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 30px;
+	width: 100%;
+	color: var(--text-color);
+	background-color: var(--light);
+	scroll-margin-top: 70px;
+
+	h1 {
+		padding: 35px 10px 25px;
+		font-size: 30px;
+		text-align: center;
+	}
+	.cards {
+		.card {
+			padding: 10px 20px;
+			width: 360px;
+			text-align: center;
+
+			.icon {
+				padding: 10px;
+				font-size: 80px;
+				color: var(--logo-color);
+			}
+			.rule {
+				padding: 10px 35px 40px;
+			}
+		}
+	}
+}
+
+.team {
+	padding-bottom: 40px;
+	color: var(--light);
+	background-color: var(--logo-color);
+	scroll-margin-top: 70px;
+
+	h1 {
+		padding: 35px 10px 10px;
+		font-size: 30px;
+		text-align: center;
+	}
+	.workers {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.worker {
+			text-align: center;
+
+			.name {
+				padding: 10px;
+				font-size: 20px;
+			}
+
+			.position {
+				padding-bottom: 20px;
+				border-bottom: var(--logo-color-second) 1px solid;
+			}
+
+			.photo {
+				margin: 50px 20px 10px;
+				width: 85vw;
+				height: 85vw;
+				background-size: cover;
+				background-position: center;
+			}
+			.first {
+				background-image: url("../img/mentor-2494673_1280.jpg");
+			}
+
+			.second {
+				background-image: url("../img/business-woman-g742863226_1280.jpg");
+			}
+
+			.third {
+				background-image: url("../img/business-man-g187a1fc11_1280.jpg");
+			}
+
+			.fourth {
+				background-image: url("../img/kobieta1.jpg");
+			}
+
+			.fifth {
+				background-image: url("../img/entrepreneur-g7b1c69764_1280.jpg");
+			}
+
+			.sixth {
+				background-image: url("../img/woman-g777c6ba00_1280.jpg");
+			}
+		}
+
+		.worker:last-child {
+			.position {
+				border: none;
+			}
+		}
+	}
+}
+
+.opinions {
+	padding-bottom: 50px;
+	color: var(--text-color);
+	background-color: var(--light);
+	scroll-margin-top: 70px;
+
+	h1 {
+		padding: 35px 10px 25px;
+		font-size: 30px;
+		text-align: center;
+	}
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.slide {
+			padding: 30px 35px;
+			margin: 20px;
+			width: 360px;
+			height: 400px;
+			background-color: var(--light);
+			border-radius: 10px;
+			box-shadow: inset 0 0 12px 2px var(--logo-color);
+			h4 {
+				padding: 20px 0;
+				font-size: 24px;
+				letter-spacing: 1px;
+				color: var(--text-color);
+			}
+
+			p {
+				q {
+					font-size: 20px;
+					font-style: italic;
+					color: var(--text-color);
+				}
+			}
+		}
+	}
+}
+
+.jobs {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 50px;
+	color: var(--light);
+	background-color: var(--logo-color);
+	scroll-margin-top: 70px;
+
+	h1 {
+		padding: 35px 10px 45px;
+		font-size: 30px;
+	}
+
+	.jobs-container {
+		width: 80vw;
+
+		.input-section {
+			width: 100%;
+			height: 200px;
+			background-image: url("../img/industrial-g79b6584fa_1280.jpg");
+			background-size: cover;
+			background-position: center;
+
+			.shadow {
+				display: flex;
+				flex-direction: column;
+				justify-content: end;
+				width: 100%;
+				height: 100%;
+				background-color: var(--shadow);
+
+				input {
+					padding: 10px;
+					margin: 20px;
+					width: 70%;
+					height: 50px;
+					font-size: 16px;
+					font-family: "Montserrat", sans-serif;
+				}
+			}
+		}
+
+		.list {
+			padding: 10px;
+			background-color: var(--light);
+
+			.list-title {
+				padding: 10px;
+				font-size: 22px;
+				font-weight: 500;
+				color: var(--text-color);
+			}
+
+			ul {
+				list-style: none;
+
+				li {
+					padding: 5px 10px;
+					font-size: 18px;
+					color: var(--text-color);
+					border-bottom: var(--light-2) 1px solid;
+				}
+
+				li:last-child {
+					border: none;
+				}
+			}
+		}
+	}
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 50px;
+	scroll-margin-top: 70px;
+
+	h1 {
+		padding: 35px 20px 45px;
+		font-size: 30px;
+		text-align: center;
+		color: var(--text-color);
+		background-color: var(--light);
+	}
+
+	.contact-div {
+		padding: 40px 25px 50px;
+		width: 80vw;
+		background-color: var(--logo-color);
+		box-shadow: 0 0 7px 2px var(--text-color);
+
+		form {
+			label {
+				display: inline-block;
+				padding: 10px 5px;
+				width: 100%;
+				font-size: 20px;
+			}
+			input {
+				padding: 5px;
+				margin-bottom: 20px;
+				width: 90%;
+				height: 36px;
+				font-size: 16px;
+				font-family: "Montserrat", sans-serif;
+			}
+
+			textarea {
+				margin-bottom: 20px;
+				width: 90%;
+				height: 200px;
+				font-size: 16px;
+				font-family: "Montserrat", sans-serif;
+			}
+			.checkbox-section {
+				display: flex;
+				width: 100%;
+
+				.checkbox {
+					padding: 5px;
+					width: 30px;
+				}
+
+				.checkbox-label {
+					padding: 1px 30px 0 8px;
+					font-size: 14px;
+				}
+			}
+
+			.send {
+				position: relative;
+				left: calc(50% - 60px);
+				margin-top: 40px;
+				padding: 20px;
+				width: 120px;
+				font-family: "Montserrat", sans-serif;
+				font-size: 18px;
+				font-weight: 500;
+				text-transform: uppercase;
+				color: var(--text-color);
+				background-color: var(--light);
+				border: 2px solid var(--text-color);
+				border-radius: 10px;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+footer {
+	color: #000;
+	background-color: var(--logo-color);
+	.footer-container {
+		padding: 40px 20px 25px;
+		font-size: 20px;
+
+		.faf {
+			padding: 10px 7px;
+		}
+	}
+
+	.copy {
+		padding: 10px;
+		text-align: center;
+	}
+}
