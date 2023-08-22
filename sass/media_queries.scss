@@ -103,6 +103,7 @@
 	footer {
 		.footer-container {
 			padding-left: 10vw;
+			font-size: 18px;
 		}
 	}
 }
@@ -364,8 +365,30 @@
 	.main-photo {
 		.shadow {
 			h1 {
-			padding: 110px 70px;
-			width: 50%;
+				padding: 110px 70px;
+				width: 50%;
+			}
+		}
+	}
+}
+
+@media (max-width: 320px) {
+	nav {
+		.nav-container {
+			.nav {
+				a {
+					.logo-div {
+						h1 {
+							padding-top: 16px;
+							font-size: 32px;
+						}
+					}
+				}
+
+				.visible-icon {
+					padding: 15px 10px;
+					font-size: 30px;
+				}
 			}
 		}
 	}

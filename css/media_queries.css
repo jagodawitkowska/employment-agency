@@ -69,6 +69,7 @@
   }
   footer .footer-container {
     padding-left: 10vw;
+    font-size: 18px;
   }
 }
 @media (min-width: 768px) {
@@ -250,5 +251,15 @@
   .main-photo .shadow h1 {
     padding: 110px 70px;
     width: 50%;
+  }
+}
+@media (max-width: 320px) {
+  nav .nav-container .nav a .logo-div h1 {
+    padding-top: 16px;
+    font-size: 32px;
+  }
+  nav .nav-container .nav .visible-icon {
+    padding: 15px 10px;
+    font-size: 30px;
   }
 }/*# sourceMappingURL=media_queries.css.map */
